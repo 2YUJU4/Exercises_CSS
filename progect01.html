@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Vollkorn&display=swap" rel="stylesheet">
+    
+    
+    <title>프젝01</title>
+    <style>
+        /*빈칸*/
+        .blank{
+            height: 30px;
+        }
+
+
+        .container{
+            margin: auto;
+        }
+
+        /*로고 영역*/
+        #logoImg{
+            width: 50px;
+            height: 50px;
+        }
+
+        /*네바영역*/
+        .nav-item>a{
+
+            font-family: 'Vollkorn', serif;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .nav-item>a:hover{
+            text-decoration:underline black;
+        }
+
+        /*케러셀 영역*/
+        .carousel-item h3{
+            
+            font-family: 'Shadows Into Light', cursive;
+        }
+        .carousel-caption button{
+            font-family: 'Vollkorn', serif;
+        }
+
+        /*글귀1*/
+        .story01{
+            width: 1100px;
+            height: 300px;
+            text-align: center;
+            line-height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .story01 p{
+            font-family: 'Vollkorn', serif;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        /*구매 사진 링크*/
+        .connect img{
+            position: relative;
+            
+        }
+        .connect button{
+            font-family: 'Vollkorn', serif;
+            position: absolute;
+            margin-top: 130px; 
+            padding: 10px;
+            font-size: x-large;
+            
+        }
+        
+
+        /*설명 + 그림*/
+        .desc-txt{
+            font-family: 'Vollkorn', serif;
+        }
+        .desc-Img img{
+            padding: 10px;
+        }
+        #p3{
+            margin-left: 20px;
+        }
+        #p4{
+            margin-left: 30px;
+        }
+        #p5{
+            
+            margin-left: 20px;
+        }
+        .desc-txt{
+            text-align: center;
+            margin-top: 100px;
+        }
+
+
+
+         /*글귀2*/
+         .story02{
+            width: 1100px;
+            height: 300px;
+            text-align: center;
+            line-height: 25px;
+            display: flex;   
+            flex-wrap: wrap;
+            flex-direction: column; /*수직 정렬*/
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .story02 p{
+            font-family: 'Vollkorn', serif;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        .story02:hover #txt2{
+            font-size: xx-large;
+            color: #ebbb0e;
+            transition-duration:1s;
+            cursor : url(imgs/sunflower.png),url(imgs/sunflower.png), auto;
+        }
+
+        /*고흐 얼굴 사진*/
+        .contain {
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        }
+
+        .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1; 
+        width: 200px;
+        height: 500px;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        }
+
+        .contain:hover .overlay {
+        opacity: 1;
+        }
+        .self a{
+        position: relative;
+        font-family: 'Vollkorn', serif;
+        
+        color: white;
+        text-align: center;
+        line-height: 500px;
+       
+    }
+
+
+
+
+        
+
+        /*date & 로케이션*/
+        .date-location{
+            border-top: 1px dashed gainsboro;
+            border-bottom: 1px dashed gainsboro;
+        }
+        .date{
+            font-family: 'Vollkorn', serif;
+            padding: 10px;
+        }
+        .location{
+            font-family: 'Vollkorn', serif;
+            padding: 10px;
+        }
+
+        /*email 예약*/
+        .reservation{
+            font-family: 'Vollkorn', serif;
+            padding-top: 10px;
+        }
+
+        
+        /*footer 영역*/
+        .ft-contact{
+            font-family: 'Vollkorn', serif;
+            padding: 15px;
+        }
+        .ft-contact li{
+            list-style: none;
+            line-height: 30px;
+        }
+        #social{
+            width: 35px;
+        }
+        .footer{
+            border-top: 1px dashed gainsboro;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--네비바-->
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img id="logoImg" src="imgs/logoImg.png">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT ARTIST</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">TIME AND PLACE</a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                      </li> 
+                                         
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+          </div>
+        </div>
+        <!--케러셀-->
+        <div class="row">
+            <div class="col">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imgs/carousel_1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>The Flower : He Loved</h3>
+                          <button type="button" class="btn btn-outline-light">BUY TICKET</button>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imgs/carousel_2.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>The Flower : He Loved</h3>
+                          <button type="button" class="btn btn-outline-light">BUY TICKET</button>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imgs/carousel_3.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>The Flower : He Loved</h3>
+                          <button type="button" class="btn btn-outline-light">BUY TICKET</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+
+        <!--글귀1(전시회에 관해)-->
+        <div class="row">
+            <div class="col story01">
+                    <p> Explore Vincent van Gogh's masterpieces in the museum's permanent exhibition.<br> 
+                    See his development as an artist in the museum galleries.<br>
+                    Get to know his ideas and ambitions and step into Van Gogh's world.</p>
+            </div>
+        </div>
+        <!--사진 , 구매링크-->
+        <div class="row">
+            <div class="col connect d-flex justify-content-center">
+                <img src="imgs/photo01.png">
+                <button type="button" class="btn btn-outline-light">Buy Tickets Online</button>
+            </div>
+            <div class="col connect d-flex justify-content-center">
+                <img src="imgs/photo02.png">
+                <button type="button" class="btn btn-outline-light">Get Your Discounts</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col blank"></div>
+        </div>
+
+        <!--작품 설명 -->
+        <div class="row">
+            <div class="col-12 col-sm-6 desc-txt">
+
+                <h2>Irises</h2>
+                <h3>1890</h3>
+                <p>
+                     the only still lifes of any ambition <br>
+                     he had undertaken during his yearlong stay<br>
+                     two of irises, two of roses,<br> 
+                     in contrasting color schemes and formats. </p>
+
+            </div>
+            <div class="col-12 col-sm-6 desc-Img">
+                <img id="p3" src="imgs/photo03.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 order-1 desc-Img">
+                <img id="p4" src="imgs/photo04.png">
+            </div>
+            <div class="col-12 col-sm-6 order-sm-2 desc-txt">
+
+                <h2>Oleanders</h2>
+                <h3>1888</h3>
+                <p>For Van Gogh, oleanders were joyous,<br> 
+                    life-affirming flowers that bloomed "inexhaustibly"<br> and were always "putting out strong new shoots."<br> 
+                    In this painting of August 1888 the flowers fill a majolica jug<br> that the artist used for other still lifes made in Arles.<br> </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 desc-txt">
+
+                <h2>Roses</h2>
+                <h3>1890</h3>
+                <p> 
+                     "canvas of pink roses against a yellow-green background in a green vase." </p>
+
+            </div>
+            <div class="col-12 col-sm-6 desc-Img">
+                <img id="p5" src="imgs/photo05.png">
+            </div>
+        </div>
+
+        <!--글귀2 (화가에 대하여)-->
+        <div class="row">
+            <div class="col col-sm-12 text-sm-center story02">
+                
+                    <p id="txt1">About The Artist</p><br> 
+                    <p id="txt2">Vincent Willem van Gogh</p><br>
+                    <p id="txt3"> Dutch post-impressionist painter who posthumously became one of the most famous and influential figures<br> 
+                        in the history of Western artGet to know his ideas and ambitions and step into Van Gogh's world.</p>
+                
+            </div>
+        </div>
+
+        <!-- 고흐 반쪽 얼굴 -->
+        <div class="row half-face no-gutters">
+            <div class="col-12 col-sm-6 self d-flex justify-content-end ">
+                <div class="contain">
+                    <img id="self-face" src="imgs/self_1.png">
+                    <div class="overlay"><a href="#">LIFE</a></div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-sm-6 self d-flex justify-content-first ">
+                <div class="contain">
+                    <img id="self-face" src="imgs/self_2.png">
+                    <div class="overlay"><a href="#">MASTERPIECES</a></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col blank"></div>
+        </div>
+        <div class="row half-face no-gutters">
+            <div class="col-12 col-sm-6 self d-flex justify-content-end">
+                <div class="contain">
+                    <img id="self-face" src="imgs/self_3.png">
+                    <div class="overlay"><a href="#">FLOWERS</a></div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-sm-6 self d-flex justify-content-first">
+                <div class="contain">
+                    <img id="self-face" src="imgs/self_4.png">
+                    <div class="overlay"><a href="#">DEATH</a></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--빈공간-->
+        <div class="row">
+            <div class="col blank"></div>
+        </div>
+
+        <!-- date & location-->
+        <div class="row date-location">
+            
+            <div class="col date">
+                <h1>Date & Location</h1>
+                <p>Buy tickets on internet or at the gallery before the event</p>
+            </div>
+            <div class="col location">
+                <h3>New collection exposition in London</h3>
+                <p>Date: Jul 27 2222</p>
+                <p>Time: 8 pm - 10 pm</p>
+                <p>Location: YuJu Gallery, London</p>
+                <p>New collection exposition in London</p>
+                <p>Price: £16</p>
+            </div>
+        </div>
+
+        <!--reservation form-->
+        <div class="row reserBox">
+            <div class="col">
+                <form class="row g-3 d-flex justify-content-center p-2">
+                    <div class="col-6 reservation">
+                       <h4><strong> our mailing list and schedule your visit</strong></h4>
+                      <label for="inputEmail4" class="form-label">Email address*</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Your email address">
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-dark">submit</button>
+                    </div>
+                  </form>
+                
+            </div>
+        </div>
+
+        <!--footer-->
+     <div class="row footer">
+            <div class="col ft-contact">
+                <h1>Moment</h1>
+            </div>
+            <div class="col ft-contact">
+                <ul>
+                    <li><h3>Contacts</h3></li>
+                    <li>Phone:<br>999-999-999</li>
+                    <li>Email:<br>Lee@yuyu.juju</li>
+                    
+                    <div class="row">
+                        <div class="col social  d-flex justify-content-first p-2">
+                            <a href="#"><img id="social" src="imgs/tweettweet.png"></a> 
+                            <a href="#"><img id="social" src="imgs/facebook.png"></a>
+                            <a href="#"><img id="social" src="imgs/insta.png"></a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+      </div>
+    
+</body>
+</html>
